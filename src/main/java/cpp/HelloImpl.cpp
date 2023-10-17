@@ -41,9 +41,9 @@ JNIEXPORT jobject JNICALL Java_meta_HelloMetaCpp_hello(JNIEnv *env, jobject this
 }
 
 JNIEXPORT jint JNICALL Java_meta_HelloMetaCpp_add(JNIEnv * env, jobject thisObj, jint a, jint b) {
-    jint result = a + b;
-    cout << a << " + " << b << " = " << result << endl;
-    return result;
+//    jint result = a + b;
+//    cout << a << " + " << b << " = " << result << endl;
+    return a + b;
 }
 
 JNIEXPORT jstring JNICALL Java_meta_HelloMetaCpp_toString(JNIEnv *env, jobject thisObj, jobject num) {

@@ -41,3 +41,21 @@ java -Djava.library.path=./c meta.HelloMeta
 ```shell
 g++ -Wl,--add-stdcall-alias -I"%JAVA_HOME%\include" -I"%JAVA_HOME%\include\win32" -shared -o hellocpp.dll HelloImpl.cpp
 ```
+
+## jna
+
+```shell
+g++ -Wl,--add-stdcall-alias -shared -o hello.dll hello.cpp
+
+```
+
+## 性能对比
+
+test object, n=1000000
+jni time: 1194
+jna time: 2732
+
+test int, n=1000000
+java time: 2
+jni time: 5
+jna time: 660
