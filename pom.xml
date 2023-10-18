@@ -32,6 +32,17 @@
             <artifactId>jna-platform</artifactId>
             <version>5.13.0</version>
         </dependency>
+
+        <dependency>
+            <groupId>com.google.protobuf</groupId>
+            <artifactId>protobuf-java</artifactId>
+            <version>3.22.3</version>
+        </dependency>
+        <dependency>
+            <groupId>com.google.protobuf</groupId>
+            <artifactId>protobuf-cpp</artifactId>
+            <version>3.22.3</version>
+        </dependency>
     </dependencies>
 
 </project>

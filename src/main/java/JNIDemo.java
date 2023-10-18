@@ -2,7 +2,7 @@ import meta.HelloMetaCpp;
 import meta.Request;
 import meta.Response;
 
-public class Main {
+public class JNIDemo {
     static {
         System.loadLibrary("hellocpp");
     }

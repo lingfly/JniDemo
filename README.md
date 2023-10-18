@@ -59,3 +59,13 @@ test int, n=1000000
 java time: 2
 jni time: 5
 jna time: 660
+
+## proto
+
+```shell
+protoc --java_out=./ ./proto/hello.proto
+protoc --cpp_out=./ ./proto/hello.proto
+```
+
+n=1000000
+proto total time: 505

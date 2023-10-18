@@ -1,0 +1,21 @@
+syntax = "proto3";
+option java_package = "proto";
+
+
+message Request {
+  int64 id = 1;
+  string name = 2;
+}
+
+message Response {
+  int64 id = 1;
+  string name = 2;
+}
+
+message RequestList {
+  repeated Request requestList = 1;
+}
+
+message ResponseList {
+  repeated Response ResponseList = 1;
+}
