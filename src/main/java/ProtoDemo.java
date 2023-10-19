@@ -10,18 +10,7 @@ public class ProtoDemo {
     }
 
     public static void main(String[] args) throws InvalidProtocolBufferException {
-        Hello.RequestList.Builder reqListBuilder = Hello.RequestList.newBuilder();
-        Hello.Request.Builder reqBuilder = Hello.Request.newBuilder();
-        int m = 100;
-        for (int i = 0; i < m; i++) {
-            Hello.Request request = reqBuilder.setId(i).setName("test"+i).build();
-            reqListBuilder.addRequestList(request);
-        }
-        Hello.RequestList requestList = reqListBuilder.build();
-        System.out.println(requestList);
-        byte[] byteArray = requestList.toByteArray();
-        Hello.RequestList requestList1 = Hello.RequestList.parseFrom(byteArray);
-        System.out.println(requestList1);
+        test1();
 
     }
 
@@ -39,6 +28,21 @@ public class ProtoDemo {
         }
 
         System.out.println("total time: " + (System.currentTimeMillis() - st));
+    }
+
+    static void test2() throws InvalidProtocolBufferException {
+        Hello.RequestList.Builder reqListBuilder = Hello.RequestList.newBuilder();
+        Hello.Request.Builder reqBuilder = Hello.Request.newBuilder();
+        int m = 100;
+        for (int i = 0; i < m; i++) {
+            Hello.Request request = reqBuilder.setId(i).setName("test" + i).build();
+            reqListBuilder.addRequestList(request);
+        }
+        Hello.RequestList requestList = reqListBuilder.build();
+        System.out.println(requestList);
+        byte[] byteArray = requestList.toByteArray();
+        Hello.RequestList requestList1 = Hello.RequestList.parseFrom(byteArray);
+        System.out.println(requestList1);
     }
 
 

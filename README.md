@@ -37,6 +37,10 @@ java -Djava.library.path=./c meta.HelloMeta
 ```
 
 ## cpp
+```shell
+# VM参数
+-Djava.library.path=./src/main/java/cpp
+```
 
 ```shell
 g++ -Wl,--add-stdcall-alias -I"%JAVA_HOME%\include" -I"%JAVA_HOME%\include\win32" -shared -o hellocpp.dll HelloImpl.cpp
@@ -69,3 +73,14 @@ protoc --cpp_out=./ ./proto/hello.proto
 
 n=1000000
 proto total time: 505
+
+## callback
+
+```shell
+# VM参数
+-Djava.library.path=./src/main/java/callback
+```
+
+```shell
+g++ -Wl,--add-stdcall-alias -I"%JAVA_HOME%\include" -I"%JAVA_HOME%\include\win32" -shared -o ./callback/callback.dll callback/callback.cpp
+```
